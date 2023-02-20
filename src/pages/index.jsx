@@ -6,6 +6,7 @@ import { parse } from 'rss-to-json'
 import { useAudioPlayer } from '@/components/AudioProvider'
 import { Container } from '@/components/Container'
 import { FormattedDate } from '@/components/FormattedDate'
+import Image from 'next/image'
 
 function PlayPauseIcon({ playing, ...props }) {
   return (
@@ -101,8 +102,8 @@ export default function Home({ episodes }) {
     <>
       <Head>
         <title>
-          Their Side - Conversations with the most tragically misunderstood
-          people of our time
+          Stoned Ape Podcast - Conversations with the most wild, weird and
+          wonderful humans that comprise Web3.
         </title>
         <meta
           name="description"
@@ -115,11 +116,46 @@ export default function Home({ episodes }) {
             Episodes
           </h1>
         </Container>
-        <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
+        {/* <div className="flex items-center justify-center rounded-lg bg-white p-6 shadow-lg"> */}
+        <div className="flex items-center justify-center rounded-lg bg-white p-6">
+          <div className="relative h-120 w-120">
+            <Image
+              src="/coming-soon.gif"
+              alt="Coming Soon"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <div class="relative">
+            <h1 class="transform bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text pb-2 text-4xl font-bold text-transparent transition duration-500 ease-in-out hover:scale-110">
+              Coming Soon
+            </h1>
+            <div class="glow absolute filter">
+              <svg
+                class="h-full w-full"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <rect
+                  x="0"
+                  y="0"
+                  width="10"
+                  height="10"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="5"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        {/* <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
           {episodes.map((episode) => (
             <EpisodeEntry key={episode.id} episode={episode} />
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   )

@@ -153,11 +153,13 @@ function AboutSection(props) {
           !isExpanded && 'lg:line-clamp-4'
         )}
       >
-        In this show, Eric and Wes dig deep to get to the facts with guests who
-        have been labeled villains by a society quick to judge, without actually
-        getting the full story. Tune in every Thursday to get to the truth with
-        another misunderstood outcast as they share the missing context in their
-        tragic tale.
+        Welcome to The Stoned Ape Podcast, where we explore the world of Web3
+        geographies, culture, and assets. Through deep conversations and
+        thought-provoking interviews with pioneers and visionaries, we'll dive
+        deep into the building blocks of the decentralized web and explore what
+        the future holds for this exciting new space. Join us as we discover the
+        potential of a decentralized future. Subscribe to The Stoned Ape Podcast
+        today and stay up to date with the latest in Web3.
       </p>
       {!isExpanded && (
         <button
@@ -173,7 +175,7 @@ function AboutSection(props) {
 }
 
 export function Layout({ children }) {
-  let hosts = ['Eric Gordon', 'Wes Mantooth']
+  let hosts = ['Alberto Cevallos', 'Ali Serag']
 
   return (
     <>
@@ -210,11 +212,12 @@ export function Layout({ children }) {
           </Link>
           <div className="mt-10 text-center lg:mt-12 lg:text-left">
             <p className="text-xl font-bold text-slate-900">
-              <Link href="/">Their Side</Link>
+              <Link href="/">The Stoned Ape Podcast</Link>
             </p>
             <p className="mt-3 text-lg font-medium leading-8 text-slate-700">
-              Conversations with the most tragically misunderstood people of our
-              time.
+              Journey down the mind-bending rabbit hole of Web3 - where culture
+              meets technology, and emerging geographies are redefining what's
+              possible in the decentralized future.
             </p>
           </div>
           <AboutSection className="mt-12 hidden lg:block" />
